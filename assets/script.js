@@ -2,10 +2,14 @@
 
     $(".btn-primary").click(function(){
         
+        
+
         var APIKey = "&appid=cba8af4433e354992fc4db0cecdab63f"
         var cityInput= $("#textBox").val();
         var APIUrl =  "https://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + APIKey;
         
+        $(".search").append("<button class= 'btn btn-secondary col-2 m-1'>" + cityInput +"</button>")
+
         fetch(APIUrl) 
 
             .then(function (response) {
@@ -13,7 +17,7 @@
             
         })
             .then(function (data) {
-                
+                console.log(data)
                 var lat = data[0].lat;
                 var lon = data[0].lon;
             
@@ -41,6 +45,13 @@
                     var toDate3 = moment().add(3, 'days')
                     var toDate4 = moment().add(4, 'days')
                     var toDate5 = moment().add(5, 'days')
+
+                    $("#today").empty()
+                    $("#today1").empty()
+                    $("#today2").empty()
+                    $("#today3").empty()
+                    $("#today4").empty()
+                    $("#today5").empty()
                     
                     
                     $("#today").append("<li>" + "todays weather for: " + cityInput + " on " + today.format("MM-DD-YY") + "</li>")

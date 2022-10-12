@@ -2,15 +2,14 @@
 
 ## Description
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+- I built this weather app to practice using the fetch api.
+- This weather app takes a city name as an input and shows you the weather for the day as well as the 5-day forecast.
+- Once you search a city it is then saved to local storage
+- It was a good experience to use the geo-coding api and the weather api at the same time!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+github link
+github deployed site
 
 ![alt text](assets/images/screenshot.png)

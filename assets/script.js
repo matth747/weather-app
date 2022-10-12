@@ -11,12 +11,24 @@
 
         var citySearch = JSON.parse(localStorage.getItem("city")) || []
 
+        $.each(citySearch, function(i, val) {
+            $(".buttons").append("<button class='btn btn-secondary'>" + citySearch[i] + "</button>")
+
+        })
+
+        $(document).on("click", "btn-secondary", function(){
+            cityInput = $(this).text()
+            console.log(cityInput, "hello!")
+        })
+
+       
         if (cityInput) {
             citySearch.push(cityInput)
             localStorage.setItem("city", JSON.stringify(citySearch))
         }
 
-        $(".search").append("<button class= 'btn btn-secondary col-2 m-1'>" + cityInput +"</button>")
+        console.log(localStorage.getItem("city"))
+
 
         fetch(APIUrl) 
 

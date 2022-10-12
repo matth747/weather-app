@@ -2,12 +2,20 @@
 
     $(".btn-primary").click(function(){
         
-        
+       
 
         var APIKey = "&appid=cba8af4433e354992fc4db0cecdab63f"
         var cityInput= $("#textBox").val();
         var APIUrl =  "https://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + APIKey;
         
+
+        var citySearch = JSON.parse(localStorage.getItem("city")) || []
+
+        if (cityInput) {
+            citySearch.push(cityInput)
+            localStorage.setItem("city", JSON.stringify(citySearch))
+        }
+
         $(".search").append("<button class= 'btn btn-secondary col-2 m-1'>" + cityInput +"</button>")
 
         fetch(APIUrl) 
@@ -138,6 +146,4 @@
             })
     
     });
-    
-   
    

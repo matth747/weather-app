@@ -9,7 +9,7 @@
 
 ## Usage
 
-github link
-github deployed site
+github link https://github.com/matth747/weather-app
+github deployed site  https://matth747.github.io/weather-app/
 
-![alt text](assets/images/screenshot.png)
+![alt text](assets/images/CH6-screenshot.jpg)
